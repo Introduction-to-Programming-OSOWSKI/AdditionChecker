@@ -16,7 +16,11 @@ public class Tests {
    @Test
    public void test(){
        App.main(null);
-       //assertEquals("EXPECTED", App.testMethod(), "ERROR MESSAGE");
+       assertEquals(true, App.addCheck(22, 22, 44), "addCheck() failed");
+       assertEquals(true, App.addCheck(5, 2, 7), "addCheck() failed");
+       assertEquals(true, App.addCheck(4, 9, 13), "addCheck() failed");
+       assertEquals(false, App.addCheck(4, 9, 12), "addCheck() failed");
+       assertEquals(false, App.addCheck(4, 9, 14), "addCheck() failed");
    }
 
 }
